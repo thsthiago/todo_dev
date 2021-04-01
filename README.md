@@ -28,7 +28,7 @@ Esse projeto foi desenvolvido com as tecnologias que venho estudado ultimamente,
 - [x] A senha vai criptografada para o banco de dados
 - [x] Autenticação nas rotas com JWT
 - [x] Rota de criação de tasks
-- [ ] Rota de listagem de tasks
+- [x] Rota de listagem de tasks
 
 **Front-end**
 
@@ -43,6 +43,7 @@ Esse projeto foi desenvolvido com as tecnologias que venho estudado ultimamente,
 
 - [x] [Git](https://git-scm.com)
 - [x] [Node.js](https://nodejs.org/en/)
+- [x] [Docker](https://docs.docker.com/get-docker/)
 
 ### 🧭 Rodando a aplicação back-end
 
@@ -53,6 +54,19 @@ $ git clone https://github.com/thsthiago/todo_dev.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd todo_node_express
+
+```
+
+**Docker:**
+
+```bash
+
+# Crie um container do postgres
+$ docker run --name todo-node-express -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+
+# Você pode usar o DBeaver para trabalhar com a manipulação do seu banco de dados.
+# Crie um banco de dados com o nome todo-node-express no seu DBeaver.
+# Na seção de Tecnologias, em utilitarios, você pode clicar em DBeaver para fazer o download direto do site.
 
 ```
 
