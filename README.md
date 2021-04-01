@@ -29,6 +29,7 @@ Esse projeto foi desenvolvido com as tecnologias que venho estudado ultimamente,
 - [x] Autenticação nas rotas com JWT
 - [x] Rota de criação de tasks
 - [x] Rota de listagem de tasks
+- [x] Rota de alteração de senha
 
 **Front-end**
 
