@@ -19,6 +19,11 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
       message: err.message
     })
   }
+
+  return response.status(500).json({
+    status: 'error',
+    message: 'Internal server error'
+  })
 })
 
 app.listen(3333, () => {
