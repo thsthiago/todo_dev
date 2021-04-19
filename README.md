@@ -1,10 +1,13 @@
-## <h1 align="center">Todo.dev</h1>
+<h1 align="center">
+  <img src="./github/logo.svg">
+</h1>
 
 <h3 align="center">⚠️Projeto em desenvolvimento</h3>
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#-layout">Layout</a> •
  <a href="#-como-executar-o-projeto">Como executar</a> •
  <a href="#-tecnologias">Tecnologias</a> •
  <a href="#-autor">Autor</a> •
@@ -44,6 +47,26 @@ Esse projeto foi desenvolvido com as tecnologias que venho estudado ultimamente,
 - [x] Atualizar status da task
 - [x] Prioridade de task por data
 - [x] Alterar senha
+
+---
+
+## 🎨 Layout
+
+O layout da aplicação está disponível no Figma:
+
+<a href="https://www.figma.com/file/D5o4hftFQztddxSKCBdXrO/Todo-Dev?node-id=0%3A1">
+  <img alt="Layout Figma" src="https://img.shields.io/badge/Acessar%20Layout-Figma-red">
+</a>
+
+<p align="center">
+  <img alt="Demo pomodoradev" title="Demo pomodoradev" src="./github/Login.svg" width="45%">
+
+  <img alt="Demo desafio-mobile" title="Demo desafio-mobile" src="./github/Cadastro.svg" width="45%">
+
+  <img alt="Demo pomodoradev" title="Demo pomodoradev" src="./github/inicial.svg" width="45%">
+
+  <img alt="Demo desafio-mobile" title="Demo desafio-mobile" src="./github/perfil.svg" width="45%">
+</p>
 
 ---
 
@@ -147,7 +170,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## 👨🏽‍💻 Autor
 
- <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/61162365?v=4" width="100px;" alt=""/>
+ <img style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/61162365?v=4" width="100px;" alt=""/>
  <br />
  <sub><b>Thiago Cabral</b></sub></a>
  <br />
