@@ -19,4 +19,20 @@ export const Container = styled.input<inputData>`
     opacity: 0;
     width: 16px;
   }
+
+  @media(max-width: 767px) {
+    width:30px;
+    background: url(${calendarImg}) no-repeat;
+    background-position: 50% 0%;
+    background-size: 16px;
+    padding-right: 30px;
+    position: relative;
+
+    &::-webkit-calendar-picker-indicator {
+      position: absolute;
+      left: -75%;
+      opacity: 0;
+      width: 40px;
+    }
+  }
 `

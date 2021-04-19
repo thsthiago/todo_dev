@@ -12,7 +12,7 @@ const Dashboard: React.FC = () => {
       <section>
         <div>
           <h1>
-            <FaClipboardList size={30}/>
+            <FaClipboardList />
             Adicione suas tarefas
           </h1>
           <Form />

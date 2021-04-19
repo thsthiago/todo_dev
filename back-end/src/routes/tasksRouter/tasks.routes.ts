@@ -34,8 +34,8 @@ tasksRouter.post('/', async (request, response) => {
   return response.json(task)
 })
 
-tasksRouter.delete('/', async (request, response) => {
-  const { id_task } = request.query
+tasksRouter.delete('/:id_task', async (request, response) => {
+  const { id_task } = request.params
 
   const deleteTask = new DeleteTask()
 
@@ -44,12 +44,12 @@ tasksRouter.delete('/', async (request, response) => {
   return response.status(200).send('')
 })
 
-tasksRouter.patch('/', async (request, response) => {
-  const { id_task } = request.body
-  console.log(id_task)
+tasksRouter.patch('/:id_task', async (request, response) => {
+  const { id_task } = request.params
+  const { status } = request.body
 
   const updateStatus = new UpdateStatusService()
-  await updateStatus.execute(id_task)
+  await updateStatus.execute({ id_task, status })
 
   return response.status(200).send('')
 })

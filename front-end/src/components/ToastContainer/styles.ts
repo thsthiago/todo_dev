@@ -7,4 +7,8 @@ export const Container = styled.div`
   padding: 30px;
   overflow: hidden;
   z-index: 5;
+
+  @media(max-width: 1023px) {
+    top: 50px;
+  }
 `

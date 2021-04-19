@@ -10,4 +10,9 @@ export const Container = styled.input<inputData>`
   border: none;
   border-bottom: solid 1px var(--background-input);
   border-color: ${props => props.err && '#c53030'};
+
+  @media(max-width: 767px) {
+    flex: 1;
+    width: 100%;
+  }
 `

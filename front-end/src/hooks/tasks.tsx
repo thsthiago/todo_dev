@@ -16,10 +16,15 @@ interface FormData {
   data: string;
 }
 
+interface updateData {
+  id_task: string;
+  status: 'complete' | 'incomplete' | 'unsuccessful';
+}
+
 interface TasksContextProps {
   deleteTask(id_task: string): Promise<void>;
   addTask(data: FormData): Promise<void>;
-  updateStatus(id_task: string): Promise<void>;
+  updateStatus({ id_task, status }: updateData): Promise<string>;
   tasks: task[];
 }
 
@@ -45,10 +50,10 @@ const TasksProvider: React.FC = ({ children }) => {
         })
         .catch(err => console.log(err.message))
     }
-  }, [filterDate])
+  }, [filterDate, user])
 
   const deleteTask = useCallback(async (id_task: string): Promise<void> => {
-    await api.delete('/tasks', {
+    await api.delete(`/tasks/${id_task}`, {
       params: {
         id_task
       },
@@ -79,10 +84,11 @@ const TasksProvider: React.FC = ({ children }) => {
     setTasks(props => filterDate([...props, response.data]))
   }, [])
 
-  const updateStatus = useCallback(async (id_task: string): Promise<void> => {
-    const response = await api.patch('/tasks',
+  const updateStatus = useCallback(async ({ id_task, status }: updateData): Promise<string> => {
+    const newStatus = status === 'complete' ? 'incomplete' : 'complete'
+    await api.patch(`/tasks/${id_task}`,
       {
-        id_task
+        status: newStatus
       },
       {
         headers: {
@@ -90,6 +96,8 @@ const TasksProvider: React.FC = ({ children }) => {
         }
       }
     )
+
+    return newStatus
   }, [])
 
   return (

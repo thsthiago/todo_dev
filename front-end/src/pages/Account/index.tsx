@@ -62,7 +62,7 @@ const Account: React.FC = () => {
         <div>
           <div>
             <p>
-              <CgProfile size={200} color="#6930C3"/>
+              <CgProfile color="#6930C3"/>
             </p>
             <h1>{user.name}</h1>
           </div>

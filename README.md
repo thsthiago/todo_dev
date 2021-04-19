@@ -29,12 +29,21 @@ Esse projeto foi desenvolvido com as tecnologias que venho estudado ultimamente,
 - [x] Autenticação nas rotas com JWT
 - [x] Rota de criação de tasks
 - [x] Rota de listagem de tasks
+- [x] Rota de alteração de status da task
+- [x] Rota de remoção de task
 - [x] Rota de alteração de senha
 
 **Front-end**
 
-- [ ] Modo dark
-- [ ] ....
+- [x] Autenticação nas rotas
+- [x] SignIn
+- [x] SignUp
+- [x] Criação de tasks
+- [x] Listagem de tasks
+- [x] Remoção de task
+- [x] Atualizar status da task
+- [x] Prioridade de task por data
+- [x] Alterar senha
 
 ---
 
@@ -44,61 +53,54 @@ Esse projeto foi desenvolvido com as tecnologias que venho estudado ultimamente,
 
 - [x] [Git](https://git-scm.com)
 - [x] [Node.js](https://nodejs.org/en/)
-- [x] [Docker](https://docs.docker.com/get-docker/)
+- [x] [PostgreSQL](https://www.postgresql.org/)
 
-### 🧭 Rodando a aplicação back-end
+### 🧭 Rodando a aplicação
 
 ```bash
-
 # Clone este repositório
 $ git clone https://github.com/thsthiago/todo_dev.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd todo_node_express
-
+$ cd todo_dev
 ```
 
-**Docker:**
+### Back-end
 
 ```bash
+# Crie um banco de dados utilizando o PostgreSQL com o
+# nome "todo-node-express"
 
-# Crie um container do postgres
-$ docker run --name todo-node-express -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
-
-# Você pode usar o DBeaver para trabalhar com a manipulação do seu banco de dados.
-# Crie um banco de dados com o nome todo-node-express no seu DBeaver.
-# Na seção de Tecnologias, em utilitarios, você pode clicar em DBeaver para fazer o download direto do site.
-
-```
-
-**Rodando aplicação com yarn:**
-
-```bash
+# Acesse a pasta back-end
+$ cd back-end
 
 # Instale as dependências
 $ yarn
 
-# Execute a aplicação em modo de desenvolvimento
+# Crie as tabelas no banco de dados
+$ yarn typeorm migration:run
+
+# Execute a aplicação
 $ yarn dev:server
 
-# A api será aberta na porta:3333 - acesse com o insominia:
+# A api será aberta na porta:3333
 $ http://localhost:3333
-
 ```
 
-**Rodando aplicação com npm:**
+### Front-end
 
 ```bash
+# Acesse a pasta front-end
+$ cd front-end
 
 # Instale as dependências
-$ npm install
+$ yarn
 
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev:server
+# Execute a aplicação
+$ yarn start
 
-# A api será aberta na porta:3333 - com o insominia:
-$ http://localhost:3333
-
+# A aplicação será aberta na porta:3000
+$ http://localhost:3000
 ```
 
 ---
@@ -107,6 +109,8 @@ $ http://localhost:3333
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
+**_Back-end_:**
+
 - **Node JS**
 - **Typescritp**
 - **Express.js**
@@ -114,16 +118,30 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - **Uuidv4**
 - **Typeorm**
 - **Pg**
-- **Yarn**
 - **Eslint**
 - **ts-node-dev**
+
+**_Front-end_:**
+
+- **React JS**
+- **React-router-dom**
+- **React-spring**
+- **React-icons**
+- **Styled-components**
+- **@unform**
+- **date-fns**
+- **Typescript**
+- **uuid**
+- **Yup**
+- **Eslint**
+- **axios**
 
 #### [](https://github.com/tgmarinho/Ecoleta#utilit%C3%A1rios)**Utilitários**
 
 - Editor: **[Visual Studio Code](https://code.visualstudio.com/)**
 - Consultas na api: **[insominia](https://insomnia.rest/download)**
-- Docker: **[Docker](https://docs.docker.com/get-docker/)**
 - DBeaver: **[DBeaver](https://dbeaver.io/download/)**
+- PostgreSQL: **[PostgreSQL](https://www.postgresql.org/)**
 
 ---
 

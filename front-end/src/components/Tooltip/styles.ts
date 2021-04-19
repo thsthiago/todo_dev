@@ -37,4 +37,12 @@ export const Container = styled.div`
     opacity: 1;
     visibility: visible;
   }
+
+  @media(max-width: 350px) {
+    span {
+      left: initial;
+      right: 0%;
+      transform: translateX(0%);
+    }
+  }
 `

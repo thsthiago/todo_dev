@@ -92,4 +92,20 @@ export const Container = styled(animated.div)<ToastProps>`
     animation-name: ${animatedSpan};
     animation-duration: 4s;
   }
+
+  @media(max-width: 350px) {
+    width: 100%;
+
+    div {
+      flex: 1;
+      strong {
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+
+  }
 `

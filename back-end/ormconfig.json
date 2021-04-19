@@ -4,7 +4,7 @@
   "port": 5432,
   "username": "postgres",
   "password": "docker",
-  "database": "todo-dev",
+  "database": "todo-node-express",
   "entities": [
     "./src/models/*.ts"
   ],

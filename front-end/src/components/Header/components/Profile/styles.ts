@@ -19,7 +19,7 @@ export const Container = styled.div<animate>`
     margin-right: 5px;
   }
 
-  div {
+  nav {
     position: absolute;
     top: calc(100% + 20px);
     left: 50%;

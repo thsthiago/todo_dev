@@ -17,7 +17,7 @@ const Profile: React.FC = () => {
       <CgProfile size={28} color=""/>
       <strong>{user.name}</strong>
       {nav &&
-        <div>
+        <nav>
           <Link to={`/account/${user.name}`}>
             <FiUser size={18}/>
             Minha conta
@@ -26,7 +26,7 @@ const Profile: React.FC = () => {
             <FiLogOut size={18}/>
             Sair da conta
           </Link>
-        </div>
+        </nav>
       }
     </Container>
   )

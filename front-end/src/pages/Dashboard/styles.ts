@@ -11,6 +11,7 @@ export const Container = styled.div`
   background: url(${backgroundList}) no-repeat;
   background-position: center 80%;
   background-size: 45% 45%;
+  position: relative;
 
   section {
     width: 100%;
@@ -31,8 +32,33 @@ export const Container = styled.div`
         font-size: 2rem;
 
         svg {
+          font-size: 2rem;
           margin-right: 7px;
         }
+      }
+    }
+  }
+
+  @media(max-width: 1024px) {
+    section div h1 {
+      padding-top: 40px;
+      font-size: 1.4rem;
+
+      svg {
+        font-size: 1.4rem;
+        margin-right: 7px;
+      }
+    }
+  }
+
+  @media(max-width: 767px) {
+    section div h1 {
+      padding-top: 40px;
+      font-size: 1.2rem;
+
+      svg {
+        font-size: 1.2rem;
+        margin-right: 7px;
       }
     }
   }

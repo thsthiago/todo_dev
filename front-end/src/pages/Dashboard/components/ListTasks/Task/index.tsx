@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { BsInfoCircle } from 'react-icons/bs'
 import { FiCalendar } from 'react-icons/fi'
-import { RiCheckboxCircleLine, RiDeleteBin6Line } from 'react-icons/ri'
+import { RiCheckboxBlankLine, RiCheckboxCircleLine, RiCheckboxFill, RiDeleteBin6Line } from 'react-icons/ri'
 import { task, useTasks } from '../../../../../hooks/tasks'
 import dateValidate from '../../../../../utils/dataValidate'
 import formatDate from '../../../../../utils/formatDate'
@@ -38,10 +38,10 @@ const Task: React.FC<taskData> = ({ task, style }: taskData) => {
     const response = await deleteTask(id_tasks)
   }, [deleteTask])
 
-  const updateStatusTask = useCallback(async (id_tasks: string) => {
-    setStatus({ status: 'complete' })
-    updateStatus(id_tasks)
-  }, [updateStatus])
+  const updateStatusTask = useCallback(async (id_task) => {
+    const response = await updateStatus({ id_task, status: status.status })
+    setStatus({ status: response as 'complete' | 'incomplete' | 'unsuccessful' })
+  }, [updateStatus, status])
 
   const tooltip = {
     incomplete: 'Tarefa pendente',
@@ -55,17 +55,20 @@ const Task: React.FC<taskData> = ({ task, style }: taskData) => {
       <div>
         <p>
           <span>{formatDate(task.deadline)}</span>
-          <FiCalendar size={30} />
+          <FiCalendar />
         </p>
         <p>
           <span>{tooltip[status.status]}</span>
-          <BsInfoCircle size={30} />
+          <BsInfoCircle />
         </p>
         <button type="button" onClick={() => deleteTasks(task.id)}>
-          <RiDeleteBin6Line size={35}/>
+          <RiDeleteBin6Line />
         </button>
         <button type="button" onClick={() => updateStatusTask(task.id)}>
-          <RiCheckboxCircleLine size={35}/>
+          {status.status === 'complete'
+            ? <RiCheckboxFill />
+            : <RiCheckboxBlankLine />
+          }
         </button>
 
       </div>

@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import background from '../../assets/background.svg'
 
 export const Container = styled.div`
-  height: 100vh;
   width: 100%;
   display: flex;
+  height: 100%;
 `
 
 export const Background = styled.div`
@@ -16,6 +16,7 @@ export const Background = styled.div`
 export const Content = styled.div`
   width: 100%;
   padding: 20px 10px;
+  min-height: 600px;
   max-width: 550px;
   background-color: var(--background);
   display: flex;
@@ -54,6 +55,17 @@ export const Content = styled.div`
 
     &:hover {
       color: var(--color-input)
+    }
+  }
+
+  @media(max-width: 767px) {
+    h1 {
+      font-size: 20px;
+    }
+
+    a {
+      margin-top: 80px;
+      padding-bottom: 30px;
     }
   }
 `
