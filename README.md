@@ -2,8 +2,6 @@
   <img src="./github/logo.svg">
 </h1>
 
-<h3 align="center">⚠️Projeto em desenvolvimento</h3>
-
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#-funcionalidades">Funcionalidades</a> •
