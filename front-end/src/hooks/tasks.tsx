@@ -50,7 +50,7 @@ const TasksProvider: React.FC = ({ children }) => {
         })
         .catch(err => console.log(err.message))
     }
-  }, [filterDate, user])
+  }, [filterDate, user, token])
 
   const deleteTask = useCallback(async (id_task: string): Promise<void> => {
     await api.delete(`/tasks/${id_task}`, {
@@ -64,7 +64,7 @@ const TasksProvider: React.FC = ({ children }) => {
 
     const newTasks = tasks.filter(task => task.id !== id_task)
     setTasks(newTasks)
-  }, [tasks])
+  }, [tasks, token])
 
   const addTask = useCallback(async (data: FormData): Promise<void> => {
     const response = await api.post('/tasks',
@@ -82,7 +82,7 @@ const TasksProvider: React.FC = ({ children }) => {
     )
 
     setTasks(props => filterDate([...props, response.data]))
-  }, [])
+  }, [token])
 
   const updateStatus = useCallback(async ({ id_task, status }: updateData): Promise<string> => {
     const newStatus = status === 'complete' ? 'incomplete' : 'complete'
@@ -98,7 +98,7 @@ const TasksProvider: React.FC = ({ children }) => {
     )
 
     return newStatus
-  }, [])
+  }, [token])
 
   return (
     <TasksContext.Provider value={{ deleteTask, addTask, updateStatus, tasks }}>
