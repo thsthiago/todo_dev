@@ -13,10 +13,6 @@ export const Container = styled.div`
   background-position: center 80%;
   background-size: 45% 45%;
 
-  @media(max-width: 767px) {
-
-  }
-
   > section {
     width: 100%;
     height: 160px;

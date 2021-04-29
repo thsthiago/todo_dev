@@ -17,7 +17,7 @@ const Input: React.FC<InputData> = ({ name, ...rest }) => {
   }, [fieldName, registerField])
 
   return (
-    <Container ref={inputRef} err={!!error} name={name} {...rest}/>
+    <Container ref={inputRef} err={!!error} name={name} {...rest} autoComplete="off"/>
   )
 }
 
