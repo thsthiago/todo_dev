@@ -57,6 +57,7 @@ O layout da aplicação está disponível no Figma:
 </a>
 
 <p align="center">
+  <img alt="Demo pomodoradev" title="Demo pomodoradev" src="./github/todo-dev.gif" width="90%">
   <img alt="Demo pomodoradev" title="Demo pomodoradev" src="./github/Login.svg" width="45%">
 
   <img alt="Demo desafio-mobile" title="Demo desafio-mobile" src="./github/Cadastro.svg" width="45%">
