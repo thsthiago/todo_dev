@@ -17,7 +17,7 @@
 
 **[To-Do](http://priscilastuani.com.br/vantagens-em-usar-um-to-do-list/#:~:text=To%2DDo%20Lists%20s%C3%A3o%20listas,na%20parte%20inferior%20da%20lista.)** Lists são listas de todas as tarefas que você precisa realizar, ou seja, elas listam tudo que você tem a fazer, com as tarefas mais importantes no topo, e as tarefas menos importantes na parte inferior da lista.
 
-Esse projeto foi desenvolvido com as tecnologias que venho estudado ultimamente, para fixar o que venho aprendendo.
+Esse projeto foi desenvolvido com as tecnologias que venho estudado ultimamente.
 
 ---
 
