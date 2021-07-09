@@ -158,7 +158,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - **Eslint**
 - **axios**
 
-#### [](https://github.com/tgmarinho/Ecoleta#utilit%C3%A1rios)**Utilitários**
+#### **Utilitários**
 
 - Editor: **[Visual Studio Code](https://code.visualstudio.com/)**
 - Consultas na api: **[insominia](https://insomnia.rest/download)**
